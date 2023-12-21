@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Users</title>
 </head>
 <body>
 <h1 th:align="center">Users</h1>
-<table th:border="1" style="width: 80%; text-align: center; margin: auto"
-       th:cellpadding="10" th:rules="all">
+<table>
     <tr th:bgcolor="gray">
         <th>Id</th>
         <th>Name</th>
@@ -23,7 +23,7 @@
 </table>
 
 <br>
-<form method="post" action="/addUser" th:align="center">
+<form method="post" action="/addUser">
     <label>
         <input type="text" name="name" placeholder="name">
     </label>
@@ -36,7 +36,7 @@
     <input type="submit" value="Add User">
 </form>
 <br>
-<form method="post" action="/updateUser" th:align="center">
+<form method="post" action="/updateUser">
     <label>
         <input type="number" name="id" placeholder="id">
     </label>
@@ -52,7 +52,7 @@
     <input type="submit" value="Update User">
 </form>
 <br>
-<form method="post" action="/deleteUser" th:align="center">
+<form method="post" action="/deleteUser">
     <label>
         <input type="number" name="id" placeholder="id">
     </label>
